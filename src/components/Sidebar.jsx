@@ -95,15 +95,6 @@ export default function Sidebar() {
               </span>
             </a>
           ))}
-          <a 
-            href="#next-steps"
-            onClick={handleLinkClick}
-            className="group flex flex-col border-b border-background/10 pb-4 w-full"
-          >
-            <span className="font-data text-sm uppercase tracking-[0.2em] font-medium text-background group-hover:text-accent transition-colors">
-              Contact
-            </span>
-          </a>
         </nav>
 
         {/* Action Area */}

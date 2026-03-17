@@ -36,21 +36,31 @@ export default function CTA() {
 
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center z-10">
         <h2 className="cta-elem font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight">
-          Ready to move this <span className="text-accent underline decoration-1 underline-offset-8">forward?</span>
+          Ready to move <span className="text-accent underline decoration-1 underline-offset-8">forward?</span>
         </h2>
         <p className="cta-elem font-body text-xl md:text-2xl text-background/80 max-w-2xl mb-12">
-          The next step is a short call to review scope, confirm the desired features, discuss the interactive lot map, and outline the content needed for launch.
+          Have questions? Email me anytime. Ready to proceed? Confirm the project and pay below to get started.
         </p>
         
-        <a
-          href="#overview"
-          className="cta-elem magnetic-btn group bg-accent text-dark text-xl px-12 py-5 rounded-full shadow-[0_10px_40px_rgba(216,198,160,0.3)] hover:shadow-[0_15px_50px_rgba(216,198,160,0.5)]"
-        >
-          <span className="bg-layer bg-white"></span>
-          <span className="relative z-10 transition-colors font-semibold group-hover:text-primary">
-            Confirm Scope and Features
-          </span>
-        </a>
+        <div className="cta-elem flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
+          <a
+            href="mailto:wcorman@gmail.com"
+            className="magnetic-btn group w-full sm:w-auto border-2 border-accent text-accent hover:bg-accent hover:text-dark text-lg px-10 py-4 rounded-full font-semibold transition-colors"
+          >
+            Email for Questions
+          </a>
+          <a
+            href="https://buy.stripe.com/aFa3cvedB7zzczZgfG3cc03"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="magnetic-btn group w-full sm:w-auto bg-accent text-dark text-lg px-10 py-4 rounded-full shadow-[0_10px_40px_rgba(216,198,160,0.3)] hover:shadow-[0_15px_50px_rgba(216,198,160,0.5)]"
+          >
+            <span className="bg-layer bg-white"></span>
+            <span className="relative z-10 transition-colors font-semibold group-hover:text-primary">
+              Confirm Project & Pay
+            </span>
+          </a>
+        </div>
       </div>
     </section>
   );

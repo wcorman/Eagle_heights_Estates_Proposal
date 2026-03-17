@@ -24,8 +24,8 @@ export default function Footer() {
           <div className="md:col-span-3 flex flex-col gap-4">
             <h4 className="font-data text-xs text-accent uppercase tracking-widest font-bold mb-2">Prepared By</h4>
             <span className="font-body text-background/80">Wes Corman</span>
+            <span className="font-body text-background/70">Anicca Development</span>
             <span className="font-body text-background/60">Custom design and development</span>
-            <a href="#next-steps" className="font-body text-background/80 hover:text-accent hover:translate-x-1 transition-all">Next Steps</a>
           </div>
         </div>
         
@@ -34,15 +34,13 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <span className="font-data text-xs tracking-wider text-background/80 uppercase">Proposal Ready</span>
+              <span className="font-data text-xs tracking-wider text-background/80 uppercase">Proposal</span>
             </div>
-            <span className="font-body text-sm text-background/40">© {new Date().getFullYear()} Eagle Heights Estates</span>
           </div>
           
           <div className="flex items-center gap-6 font-body text-sm text-background/50">
             <a href="#features" className="hover:text-background transition-colors">Core Features</a>
             <a href="#pricing" className="hover:text-background transition-colors">Estimate</a>
-            <a href="#next-steps" className="hover:text-background transition-colors">Next Steps</a>
           </div>
         </div>
         
