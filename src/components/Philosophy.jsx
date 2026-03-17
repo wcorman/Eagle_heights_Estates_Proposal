@@ -77,7 +77,7 @@ export default function Philosophy() {
             <ul className="space-y-3 pl-5 list-disc marker:text-accent font-body text-background/70 leading-relaxed">
               <li>An interactive lot map which clearly showcases available acreage lots.</li>
               <li>Highlight proximity to Saskatoon and nearby amenities.</li>
-              <li>Make lot availability and photo/video updates quick and easy.</li>
+              <li>Ability to update lot availability and add photo/video updates.</li>
               <li>Improve visibility in Google searches for key search terms.</li>
             </ul>
           </div>

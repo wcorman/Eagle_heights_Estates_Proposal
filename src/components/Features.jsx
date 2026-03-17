@@ -23,7 +23,7 @@ const pages = [
   },
   {
     title: 'Blog (Optional)',
-    description: 'Keyword-optimized blog posts would be created as a part of the SEO Growth Plan to improve Google Search results.',
+    description: 'Keyword-optimized blogs and pages would be created as a part of the SEO Growth Plan to improve Google Search results.',
     pageLabel: 'Pages',
   },
 ];

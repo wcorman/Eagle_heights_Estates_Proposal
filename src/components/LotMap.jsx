@@ -28,7 +28,7 @@ export default function LotMap() {
         </div>
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
           <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/70 mb-4">Interactive Map</p>
-          <h3 className="font-heading text-2xl font-bold mb-3">Explore lots at a glance</h3>
+          <h3 className="font-heading text-2xl font-bold mb-3">Explore lots in detail</h3>
           <p className="font-body text-background/70 leading-relaxed">
             Visitors click individual lots to see price, size, and availability status instantly. Color-coded availability (Available, Pending, Sold) make it easy for buyers to find what they want. Example shown below.
           </p>

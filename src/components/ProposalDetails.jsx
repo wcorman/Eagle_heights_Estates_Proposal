@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monitor, Settings, TrendingUp, FileText, Hammer, Rocket, PenTool, Video, Plus, MapPin } from 'lucide-react';
+import { Monitor, Settings, TrendingUp, FileText, Hammer, Rocket, PenTool, Video, Plus, MapPin, Server } from 'lucide-react';
 
 const websiteBuildFeatures = [
   'Planning and discovery',
@@ -35,7 +35,6 @@ const seoIncludedItems = [
 const seoGrowthKeywords = [
   'acreages for sale Saskatoon',
   'acreages for sale Corman Park',
-  'acreage lots near Saskatoon',
 ];
 
 const seoGrowthPlanItems = [
@@ -83,7 +82,7 @@ function MonthlyPlansCard() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="font-body text-background/80 text-sm mb-3">Optimizing pages for searches like:</p>
+          <p className="font-body text-background/80 text-sm mb-3">Optimizing website for searches such as:</p>
           <div className="space-y-3 mb-6">
             {seoGrowthKeywords.map((term) => (
               <div key={term} className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 font-data text-xs uppercase tracking-[0.18em] text-background/90">
@@ -95,6 +94,16 @@ function MonthlyPlansCard() {
             Note: SEO results take time to show up. Improvements typically become visible over several months.
           </p>
         </div>
+      </div>
+      <div className="border-t border-white/20 p-8 bg-white/5">
+        <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/80 mb-3 flex items-center gap-2">
+          <Server size={16} />
+          Basic Hosting
+        </p>
+        <h3 className="font-heading text-2xl font-bold mb-4">$60 / month</h3>
+        <p className="font-body text-background/80 leading-relaxed mb-4">
+          Hosting costs only. No support, updates, or SEO initiatives—totally managed by the client.
+        </p>
       </div>
     </article>
   );
