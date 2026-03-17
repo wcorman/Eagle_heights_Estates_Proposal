@@ -107,7 +107,7 @@ export default function Sidebar() {
             onClick={handleLinkClick}
             className="block w-full bg-accent text-dark font-medium font-body py-4 rounded-xl hover:bg-white hover:-translate-y-1 transition-all text-center"
           >
-            View Estimate
+            View Pricing
           </a>
         </div>
       </div>

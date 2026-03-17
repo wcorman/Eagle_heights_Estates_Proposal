@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Map } from 'lucide-react';
 import interactiveLotMapGif from '../assets/interactive-lot-map.gif';
 
 const ORIGINAL_SITE_PLAN_URL =
@@ -12,26 +13,24 @@ export default function LotMap() {
       <div className="max-w-7xl mx-auto px-6 mb-16 relative z-10">
         <h2 className="text-sm font-data font-semibold text-accent uppercase tracking-widest mb-4">Core Features</h2>
         <div className="text-3xl md:text-5xl font-heading font-bold max-w-4xl text-background leading-tight">
-          The build is designed around a manageable lot system, a clickable interactive map, and search-ready content.
+          Built to support your workflow and grow with the development.
         </div>
-        <p className="font-body text-background/70 text-lg max-w-3xl mt-6 leading-relaxed">
-          Each lot can be updated individually with size, price, status, description, and map location so availability changes can be managed without rebuilding the whole site.
-        </p>
+
       </div>
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 mb-14 relative z-10">
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-          <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/70 mb-4">Lot Management</p>
-          <h3 className="font-heading text-2xl font-bold mb-3">Simple content editing</h3>
+          <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/70 mb-4">Content Management</p>
+          <h3 className="font-heading text-2xl font-bold mb-3">Add videos and photos as needed</h3>
           <p className="font-body text-background/70 leading-relaxed">
-            Update lot number, lot size, price, availability status, description, and map position through a simple, custom made dashboard.
+            A custom dashboard for uploading videos and photos as the development progresses—renderings, construction updates, and progress highlights—without touching code.
           </p>
         </div>
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
           <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/70 mb-4">Interactive Map</p>
-          <h3 className="font-heading text-2xl font-bold mb-3">Visual lot exploration</h3>
+          <h3 className="font-heading text-2xl font-bold mb-3">Explore lots at a glance</h3>
           <p className="font-body text-background/70 leading-relaxed">
-            Clickable lots, color indicators for availability, quick lot details, and direct paths into the lot information on the site.
+            Visitors click individual lots to see price, size, and availability status instantly. Color-coded availability (Available, Pending, Sold) make it easy for buyers to find what they want.
           </p>
         </div>
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
@@ -49,17 +48,18 @@ export default function LotMap() {
         <div className="flex border-b border-white/10">
           <button
             onClick={() => setActiveTab('interactive')}
-            className={`flex-1 px-6 py-4 font-data text-sm uppercase tracking-[0.2em] font-medium transition-colors ${
+            className={`flex-1 px-6 py-4 font-data text-sm uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 ${
               activeTab === 'interactive'
                 ? 'bg-white/10 text-accent border-b-2 border-accent'
                 : 'text-background/60 hover:text-background/80 hover:bg-white/5'
             }`}
           >
+            <Map size={18} />
             Interactive Lot Map
           </button>
           <button
             onClick={() => setActiveTab('original')}
-            className={`flex-1 px-6 py-4 font-data text-sm uppercase tracking-[0.2em] font-medium transition-colors ${
+            className={`flex-1 px-6 py-4 font-data text-sm uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 ${
               activeTab === 'original'
                 ? 'bg-white/10 text-accent border-b-2 border-accent'
                 : 'text-background/60 hover:text-background/80 hover:bg-white/5'

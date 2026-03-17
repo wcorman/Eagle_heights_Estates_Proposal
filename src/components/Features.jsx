@@ -3,15 +3,11 @@ import React from 'react';
 const pages = [
   {
     title: 'Home',
-    description: 'Introduction to Eagle Heights Estates, key selling points, and a preview of available lots.',
-  },
-  {
-    title: 'Available Lots',
-    description: 'Structured lot listings showing price, size, and availability status.',
+    description: 'Introduction to Eagle Heights Estates, key selling points (location, lot sizes, development vision), and a clear call-to-action to explore available lots.',
   },
   {
     title: 'Interactive Lot Map',
-    description: 'A visual map where visitors can click individual lots to view details quickly.',
+    description: 'A visual map where visitors can explore individual lots to view details, with structured listings for price, size, and availability status.',
   },
   {
     title: 'Location',
@@ -23,7 +19,12 @@ const pages = [
   },
   {
     title: 'About + Contact',
-    description: 'Developer background, contact details, and an inquiry form for interested buyers.',
+    description: 'Developer info, contact details, and an inquiry form for interested buyers.',
+  },
+  {
+    title: 'Blog (Optional)',
+    description: 'Keyword-optimized blog posts would be created as a part of the SEO Growth Plan to improve Google Search results.',
+    pageLabel: 'Pages',
   },
 ];
 
@@ -47,7 +48,7 @@ export default function Features() {
               className="bg-background rounded-[2rem] p-8 border border-dark/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] min-h-[240px] flex flex-col"
             >
               <span className="font-data text-xs uppercase tracking-[0.25em] text-primary/60 mb-6">
-                Page {String(index + 1).padStart(2, '0')}
+                {page.pageLabel ? `${page.pageLabel} 06+` : `Page ${String(index + 1).padStart(2, '0')}`}
               </span>
               <h3 className="font-heading font-bold text-2xl mb-4 text-dark">{page.title}</h3>
               <p className="font-body text-dark/70 leading-relaxed mt-auto">{page.description}</p>

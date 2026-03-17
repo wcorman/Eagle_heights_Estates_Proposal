@@ -65,29 +65,29 @@ export default function Philosophy() {
         <div className="w-12 h-px bg-accent/40 reveal-line my-4"></div>
 
         <div className="flex flex-col gap-2">
-          <p className="reveal-line text-lg md:text-xl font-body text-background/60 font-medium tracking-wide">
-            Why a custom rebuild:
-          </p>
+  
           <div className="reveal-line text-5xl md:text-7xl lg:text-[6rem] font-drama italic text-background leading-tight">
-            Move beyond <span className="text-accent underline decoration-1 underline-offset-8">basic Wix pages</span> into a faster, more flexible platform.
+          <span className="text-accent underline decoration-1 underline-offset-8">Step beyond</span> restrictive website builders into a site designed for speed, flexibility, and <span className="text-accent underline decoration-1 underline-offset-8">tailored to your business.</span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
           <div className="reveal-line bg-white/5 border border-white/10 rounded-[2rem] p-8">
-            <h3 className="font-heading text-2xl font-bold mb-4 text-background">Goals</h3>
+            <h3 className="font-heading text-2xl font-bold mb-4 text-background">Main Website Goals</h3>
             <ul className="space-y-3 pl-5 list-disc marker:text-accent font-body text-background/70 leading-relaxed">
-              <li>Clearly showcase available acreage lots.</li>
-              <li>Provide an interactive lot map with visual availability.</li>
+              <li>An interactive lot map which clearly showcases available acreage lots.</li>
               <li>Highlight proximity to Saskatoon and nearby amenities.</li>
-              <li>Make lot availability updates quick and easy over time.</li>
-              <li>Improve visibility in Google searches.</li>
+              <li>Make lot availability and photo/video updates quick and easy.</li>
+              <li>Improve visibility in Google searches for key search terms.</li>
             </ul>
           </div>
           <div className="reveal-line bg-white/5 border border-white/10 rounded-[2rem] p-8">
             <h3 className="font-heading text-2xl font-bold mb-4 text-background">Opportunity</h3>
             <p className="font-body text-background/70 leading-relaxed">
-              Rebuilding the site as a custom web experience creates room for structured lot listings, stronger SEO foundations, faster performance, and a cleaner platform for long-term management.
+              Rebuilding the website as a custom web experience creates room for interactive lot listings, stronger SEO foundations, faster performance, and a cleaner, more flexible platform for long-term growth.
+            </p>
+            <p className="font-body text-background/70 leading-relaxed mt-4">
+              A custom dashboard will also be built for managing video and photo uploads as the development progresses, making it easy to keep the site updated with current renderings, construction updates, and progress highlights.
             </p>
           </div>
         </div>

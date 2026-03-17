@@ -40,7 +40,7 @@ export default function Footer() {
           
           <div className="flex items-center gap-6 font-body text-sm text-background/50">
             <a href="#features" className="hover:text-background transition-colors">Core Features</a>
-            <a href="#pricing" className="hover:text-background transition-colors">Estimate</a>
+            <a href="#pricing" className="hover:text-background transition-colors">Pricing</a>
           </div>
         </div>
         

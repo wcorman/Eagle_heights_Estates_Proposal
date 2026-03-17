@@ -41,11 +41,11 @@ export default function Hero() {
             Website Proposal.
           </span>
         </h1>
-        <p className="hero-elem w-full text-lg md:text-xl font-body opacity-90 mt-4 leading-relaxed">
-          A proposal to rebuild the Eagle Heights Estates website as a modern custom site that clearly showcases available lots, supports an interactive lot map, and improves long-term search visibility.
+        <p className="hero-elem w-full max-w-2xl text-lg md:text-xl font-body opacity-90 mt-4 leading-relaxed">
+          A proposal to rebuild the Eagle Heights Estates website as a modern custom site that clearly showcases available lots, supports an interactive lot map, and improves long-term Google search visibility.
         </p>
         <p className="hero-elem font-body text-sm md:text-base text-background/70">
-          Designed and built by Wes Corman.
+          Prepared by Wes Corman.
         </p>
         <a href="#overview" className="hero-elem mt-8 magnetic-btn group bg-accent text-dark text-lg px-8 py-4">
           <span className="bg-layer bg-primary"></span>

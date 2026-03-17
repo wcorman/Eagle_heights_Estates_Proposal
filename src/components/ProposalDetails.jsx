@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
-import { Monitor, Settings, TrendingUp, FileText, Hammer, Rocket } from 'lucide-react';
+import React from 'react';
+import { Monitor, Settings, TrendingUp, FileText, Hammer, Rocket, PenTool, Video, Plus, MapPin } from 'lucide-react';
 
 const websiteBuildFeatures = [
-  'Planning and site structure',
+  'Planning and discovery',
+  'Site architecture and structure',
   'Custom design',
   'Fully responsive mobile-friendly layout',
-  'Lot management system with price, size, and status',
   'Interactive lot map showing lot details/status',
+  'Custom dashboard for managing lots, photos, and videos',
+  'Location page with area highlights and proximity info',
   'Developer contact page with inquiry form',
-  '"See Progress" page for video/photo updates on development progress',
-  "Ability to upload new photos and videos",
+  'Gallery / See Progress page for video/photo updates on development progress',
   'SEO-optimized page structure',
+  'Initial on-site SEO setup (Search Console, sitemap, on-page optimization)',
+  'Launch support including content upload, testing, and go-live (hosting required)',
 ];
 
 const managementItems = [
   'Website hosting',
   'Routine backups',
   'Security monitoring',
-  '5 hours worth of content updates and technical support each month',
+  '4 hours worth of content updates and technical support each month',
   'Updating lot availability (Available / Pending / Sold)',
   'Uploading new photos and videos',
   'Basic SEO monitoring',
@@ -27,7 +30,6 @@ const seoIncludedItems = [
   'Google Search Console configuration',
   'Sitemap creation',
   'On-page SEO setup',
-  'Optional Google Business Profile optimization',
 ];
 
 const seoGrowthKeywords = [
@@ -39,6 +41,7 @@ const seoGrowthKeywords = [
 const seoGrowthPlanItems = [
   'Keyword research',
   'Creation of SEO pages and blog articles',
+  'Building local backlinks and citations',
   'Internal linking improvements',
   'Updating content to improve rankings',
   'Local SEO optimization',
@@ -46,49 +49,31 @@ const seoGrowthPlanItems = [
 ];
 
 function MonthlyPlansCard() {
-  const [activeTab, setActiveTab] = useState('management');
-
   return (
-    <article className="rounded-[2rem] border border-dark/10 bg-primary text-background p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
-      <div className="flex border-b border-white/20 mb-6">
-        <button
-          onClick={() => setActiveTab('management')}
-          className={`flex-1 px-4 py-3 font-data text-sm uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 ${
-            activeTab === 'management'
-              ? 'text-accent border-b-2 border-accent'
-              : 'text-background/60 hover:text-background/80'
-          }`}
-        >
-          <Settings size={18} />
-          Management Plan
-        </button>
-        <button
-          onClick={() => setActiveTab('seo')}
-          className={`flex-1 px-4 py-3 font-data text-sm uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 ${
-            activeTab === 'seo'
-              ? 'text-accent border-b-2 border-accent'
-              : 'text-background/60 hover:text-background/80'
-          }`}
-        >
-          <TrendingUp size={18} />
-          SEO Growth Plan
-        </button>
-      </div>
-
-      {activeTab === 'management' ? (
-        <>
+    <article className="rounded-[2rem] border border-dark/10 bg-primary text-background overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] md:col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/20">
+        {/* Management Plan */}
+        <div className="p-8">
+          <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/80 mb-3 flex items-center gap-2">
+            <Settings size={16} />
+            Management Plan
+          </p>
           <h3 className="font-heading text-3xl font-bold mb-4">$195 / month</h3>
           <p className="font-body text-background/80 leading-relaxed mb-6">
-            Monthly support for hosting, updates, photos and videos, and marking lots as sold.
+            Monthly website hosting, updates, photos and videos, and updating lot information.
           </p>
           <ul className="space-y-2 font-body text-background/75 pl-5 list-disc marker:text-accent">
             {managementItems.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </>
-      ) : (
-        <>
+        </div>
+        {/* SEO Growth Plan */}
+        <div className="p-8">
+          <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/80 mb-3 flex items-center gap-2">
+            <TrendingUp size={16} />
+            SEO Growth Plan
+          </p>
           <h3 className="font-heading text-3xl font-bold mb-4">$500 / month</h3>
           <p className="font-body text-background/80 leading-relaxed mb-6">
             Includes everything in the Website Management Plan, plus:
@@ -109,8 +94,8 @@ function MonthlyPlansCard() {
           <p className="font-body text-xs text-background/50 leading-relaxed italic">
             Note: SEO results take time to show up. Improvements typically become visible over several months.
           </p>
-        </>
-      )}
+        </div>
+      </div>
     </article>
   );
 }
@@ -121,7 +106,7 @@ export default function ProposalDetails() {
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mb-16">
           <h2 className="text-sm font-data font-semibold text-primary uppercase tracking-widest mb-4">
-            Hosting, Pricing, and Timeline
+            Pricing and Timeline
           </h2>
           <div className="text-3xl md:text-5xl font-heading font-bold text-dark leading-tight">
             A custom website build with ongoing management available after launch.
@@ -130,24 +115,22 @@ export default function ProposalDetails() {
 
         <div className="grid grid-cols-1 gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <article className="rounded-[2rem] border border-dark/10 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-              <p className="font-data text-xs uppercase tracking-[0.25em] text-primary/60 mb-4 flex items-center gap-2">
-                <Monitor size={16} className="text-primary" />
-                Website Development
+            <article className="rounded-[2rem] border border-dark/10 bg-primary text-background p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
+              <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/80 mb-4 flex items-center gap-2">
+                <Monitor size={16} className="text-accent" />
+                Website Design & Development
               </p>
-              <h3 className="font-heading text-3xl font-bold text-dark mb-4">$4,250</h3>
-              <p className="font-body text-dark/70 leading-relaxed mb-6">
-                Includes planning, custom design, development, and a lot management system tailored for Eagle Heights Estates.
-              </p>
-              <ul className="space-y-2 font-body text-dark/70 text-sm pl-5 list-disc marker:text-primary mb-8">
+              <h3 className="font-heading text-3xl font-bold mb-6">$4,250</h3>
+              <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/80 mb-3">Deliverables</p>
+              <ul className="space-y-2 font-body text-background/75 text-sm pl-5 list-disc marker:text-accent mb-8">
                 {websiteBuildFeatures.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <div className="pt-6 border-t border-dark/10">
-                <p className="font-data text-xs uppercase tracking-[0.25em] text-primary/60 mb-3">On-site SEO Included</p>
-                <p className="font-body text-dark/70 text-sm mb-3">Initial SEO setup includes:</p>
-                <ul className="space-y-2 font-body text-dark/70 text-sm pl-5 list-disc marker:text-primary">
+              <div className="pt-6 border-t border-white/20">
+                <p className="font-data text-xs uppercase tracking-[0.25em] text-accent/80 mb-3">On-site SEO Included</p>
+                <p className="font-body text-background/80 text-sm mb-3">Initial SEO setup includes:</p>
+                <ul className="space-y-2 font-body text-background/75 text-sm pl-5 list-disc marker:text-accent">
                   {seoIncludedItems.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -155,7 +138,53 @@ export default function ProposalDetails() {
               </div>
             </article>
 
-            <MonthlyPlansCard />
+            <article className="rounded-[2rem] border border-dark/10 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+              <p className="font-data text-xs uppercase tracking-[0.25em] text-primary/60 mb-6 flex items-center gap-2">
+                <Plus size={16} className="text-primary" />
+                Add ons
+              </p>
+              <div className="space-y-6">
+                <div>
+                  <p className="font-heading text-lg font-bold text-dark mb-1 flex items-center gap-2">
+                    <PenTool size={16} className="text-primary" />
+                    Logo Creation
+                  </p>
+                  <p className="font-heading text-xl font-bold text-primary mb-2">$150</p>
+                  <ul className="space-y-2 font-body text-dark/70 text-sm pl-5 list-disc marker:text-primary">
+                    <li>Custom logo design tailored to Eagle Heights Estates</li>
+                    <li>Multiple revision rounds included</li>
+                  </ul>
+                </div>
+                <div className="pt-6 border-t border-dark/10">
+                  <p className="font-heading text-lg font-bold text-dark mb-1 flex items-center gap-2">
+                    <Video size={16} className="text-primary" />
+                    Drone video of land development
+                  </p>
+                  <p className="font-heading text-xl font-bold text-primary mb-2">$250</p>
+                  <ul className="space-y-2 font-body text-dark/70 text-sm pl-5 list-disc marker:text-primary">
+                    <li>Aerial footage of site and development progress</li>
+                    <li>Edited video ready for website use</li>
+                    <li>Highlights land features and lot layout</li>
+                  </ul>
+                </div>
+                <div className="pt-6 border-t border-dark/10">
+                  <p className="font-heading text-lg font-bold text-dark mb-1 flex items-center gap-2">
+                    <MapPin size={16} className="text-primary" />
+                    Optional Google Business Profile setup
+                  </p>
+                  <p className="font-heading text-xl font-bold text-primary mb-2">$40</p>
+                  <ul className="space-y-2 font-body text-dark/70 text-sm pl-5 list-disc marker:text-primary">
+                    <li>Not totally necessary—typically best for businesses with storefronts and for customer reviews</li>
+                    <li>Most traffic will come from website SEO efforts</li>
+                    <li>Verification has requirements (e.g., Google may mail a postcard to the registered address)</li>
+                    <li>We can discuss more about how to set this up if you're interested</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <MonthlyPlansCard />
 
             <article className="rounded-[2rem] border border-dark/10 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] md:col-span-2">
               <div className="flex flex-col gap-8">
@@ -197,9 +226,7 @@ export default function ProposalDetails() {
               </div>
             </article>
           </div>
-
         </div>
-      </div>
     </section>
   );
 }
