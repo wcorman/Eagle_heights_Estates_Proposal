@@ -149,10 +149,12 @@ export default function ProposalDetails() {
                     <PenTool size={16} className="text-primary" />
                     Logo Creation
                   </p>
-                  <p className="font-heading text-xl font-bold text-primary mb-2">$150</p>
+                  <p className="font-heading text-xl font-bold text-primary mb-2">$200</p>
                   <ul className="space-y-2 font-body text-dark/70 text-sm pl-5 list-disc marker:text-primary">
-                    <li>Custom logo design tailored to Eagle Heights Estates</li>
-                    <li>Multiple revision rounds included</li>
+                    <li>Custom logo design tailored for Eagle Heights Estates</li>
+                    <li>Will gather your input on logo direction, style, and feel</li>
+                    <li>Adds professional brand identity</li>
+                    <li>Collaborative feedback until you're satisfied</li>
                   </ul>
                 </div>
                 <div className="pt-6 border-t border-dark/10">
