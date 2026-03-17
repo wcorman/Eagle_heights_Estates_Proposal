@@ -10,7 +10,7 @@ const pages = [
     description: 'A visual map where visitors can explore individual lots to view details, with structured listings for price, size, and availability status.',
   },
   {
-    title: 'Location',
+    title: 'Location & Services',
     description: 'Information about proximity to Saskatoon, nearby services, and area highlights.',
   },
   {
@@ -51,7 +51,7 @@ export default function Features() {
                 {page.pageLabel ? `${page.pageLabel} 06+` : `Page ${String(index + 1).padStart(2, '0')}`}
               </span>
               <h3 className="font-heading font-bold text-2xl mb-4 text-dark">{page.title}</h3>
-              <p className="font-body text-dark/70 leading-relaxed mt-auto">{page.description}</p>
+              <p className="font-body text-dark/70 leading-relaxed">{page.description}</p>
             </article>
           ))}
         </div>
