@@ -231,7 +231,7 @@ export default function ProposalDetails() {
                       Launch
                     </p>
                     <p className="font-body text-sm text-dark/65 leading-relaxed mb-3">Content upload, final review and testing, cross-browser checks, hosting setup, and site go-live.</p>
-                    <p className="font-body text-xs text-dark/55 leading-relaxed italic">Note: Either the Management Plan or SEO Growth Plan must be subscribed to by the week of launch for the website to go live.</p>
+                    <p className="font-body text-xs text-dark/55 leading-relaxed italic">Note: A hosting plan must be subscribed to before launch for the website to go live.</p>
                   </div>
                 </div>
               </div>

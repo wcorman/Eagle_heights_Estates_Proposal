@@ -23,7 +23,7 @@ export default function Footer() {
           
           <div className="md:col-span-3 flex flex-col gap-4">
             <h4 className="font-data text-xs text-accent uppercase tracking-widest font-bold mb-2">Prepared By</h4>
-            <span className="font-body text-background/80">Wes Corman</span>
+            <a href="https://www.linkedin.com/in/wes-corman/" target="_blank" rel="noopener noreferrer" className="font-body text-background/80 hover:text-accent transition-colors">Wes Corman</a>
             <span className="font-body text-background/70">Anicca Development</span>
             <span className="font-body text-background/60">Custom design and development</span>
           </div>
